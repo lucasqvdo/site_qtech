@@ -1,0 +1,44 @@
+/* src/App.css */
+
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ESTRUTURA PRINCIPAL DO REACT */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.conteudo-principal {
+  flex: 1; /* Garante que o footer fica sempre no fundo */
+}
+
+/* ----------------------------------------- */
+/* A MAGIA DO RESPIRO: CLASSE CONTAINER GLOBAL */
+/* ----------------------------------------- */
+.container {
+  max-width: 1200px; /* Largura máxima do site */
+  margin: 0 auto;    /* Centraliza no ecrã */
+  padding: 0 40px;   /* Respiro lateral no Desktop */
+  width: 100%;
+}
+
+/* Respiro no Mobile (Celulares) */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px; 
+  }
+}
