@@ -195,3 +195,24 @@ cite { font-weight: bold; color: #2a9d8f; text-transform: uppercase; letter-spac
     min-height: auto; 
   }
 }
+
+/* --- LEGENDA DO FUNDADOR --- */
+.founder-caption {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.founder-caption strong {
+  display: block;
+  font-size: 1.3rem;
+  color: #2a9d8f; /* O verde da QTECH para dar destaque ao nome */
+  margin-bottom: 5px;
+}
+
+.founder-caption span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8); /* Branco levemente transparente para o cargo */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+}

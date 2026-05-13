@@ -1,4 +1,3 @@
-// src/pages/Home.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
@@ -6,6 +5,7 @@ import './Home.css';
 function Home() {
   return (
     <div className="home-page">
+      {/* SEÇÃO HERO */}
       <section className="hero-refined">
         <div className="container hero-grid">
           <div className="hero-text">
@@ -15,7 +15,7 @@ function Home() {
             <h1>Segurança Inteligente <span>Feita por Especialistas.</span></h1>
             <p>
               Projetamos infraestruturas de segurança e redes de alta disponibilidade 
-              que colocam o controle absoluto do seu patrimônio na palma da sua mão.
+              que colocam o controle absoluto do seu patrimônio na palma da sua mão. 
             </p>
             <div className="hero-actions">
               <Link to="/loja" className="btn-main">Explorar Catálogo</Link>
@@ -26,7 +26,7 @@ function Home() {
           <div className="hero-visual">
              <div className="glass-card">
                 <div className="glass-header">
-                  <span className="icon-shield">📱</span> {/* Ícone de celular para dar ideia de acesso remoto */}
+                  <span className="icon-shield">📱</span>
                   <span className="live-tag">ONLINE</span>
                 </div>
                 <h4>Controle Total</h4>
@@ -40,6 +40,7 @@ function Home() {
         </div>
       </section>
 
+      {/* SEÇÃO DE DIFERENCIAIS (PAIN POINTS) */}
       <section className="pain-points">
         <div className="container">
           <div className="grid-3">
@@ -59,13 +60,19 @@ function Home() {
         </div>
       </section>
 
+      {/* SEÇÃO CTA FINAL */}
       <section className="home-cta">
         <div className="container">
           <div className="cta-box">
             <h2>Pronto para assumir o controle da sua segurança?</h2>
             <p>Solicite uma análise técnica e descubra as vulnerabilidades do seu patrimônio.</p>
-            <a href="https://wa.me/5511984489030" target="_blank" rel="noreferrer" className="btn-whatsapp">
-              Falar com Especialista
+            <a 
+              href="https://wa.me/5511984489030" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="btn-whatsapp"
+            >
+              Falar com Especialista agora
             </a>
           </div>
         </div>

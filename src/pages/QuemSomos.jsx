@@ -12,17 +12,19 @@ function QuemSomos() {
             <span className="subtitle">Nossa Essência</span>
             <h1>Segurança é uma <br/><span>Estratégia de Vida.</span></h1>
             <p className="lead">
-              Na QTech, não instalamos apenas câmeras. Projetamos tranquilidade. 
-              Sob a liderança de <strong>Lucas Quevedo</strong>, transformamos tecnologia em proteção invisível e constante.
+              Na QTech, não instalamos apenas câmeras. Projetamos <strong>tranquilidade.</strong> 
+              Transformamos tecnologia em <strong>proteção</strong> invisível e constante.
+              Projetamos infraestruturas de segurança e redes de alta disponibilidade que colocam o controle absoluto do seu patrimônio na palma da sua mão.
             </p>
           </div>
         </div>
       </section>
 
-      {/* SEÇÃO EXPERTISE */}
+{/* SEÇÃO EXPERTISE */}
       <section className="about-expertise">
         <div className="container grid-split">
           <div className="expertise-image-container">
+            
             <div className="visual-tech-box">
               <img 
                 src="/lucas.jpg" 
@@ -30,12 +32,19 @@ function QuemSomos() {
                 className="founder-photo" 
               />
             </div>
+            
+            {/* NOVO: Nome e Cargo abaixo da foto */}
+            <div className="founder-caption">
+              <strong>Lucas Quevedo</strong>
+              <span>CEO da QTECH</span>
+            </div>
+
           </div>
           <div className="expertise-text">
             <h2>Por que a QTech?</h2>
             <div className="expertise-item">
               <h3>🔍 Verificação Silenciosa</h3>
-              <p>Sistemas de segurança falham em silêncio. Nosso trabalho é garantir que o erro nunca seja descoberto tarde demais.</p>
+              <p>Sistemas de segurança falham em silêncio. Nosso trabalho é garantir que o erro não seja descoberto tarde demais.</p>
             </div>
             <div className="expertise-item">
               <h3>🛠️ Engenharia Sob Medida</h3>
@@ -56,7 +65,7 @@ function QuemSomos() {
               <div className="card-content">
                 <h2>Tranquilidade e <span>proteção real.</span></h2>
                 <p>
-                  Proteger pessoas, empresas e patrimónios por meio de soluções tecnológicas e de segurança inteligentes, 
+                  Proteger pessoas, empresas e patrimônios por meio de soluções tecnológicas e de segurança inteligentes, 
                   operando sempre com o mais alto padrão profissional para entregar proteção ao que é mais importante para os nossos clientes.
                 </p>
               </div>
@@ -68,7 +77,7 @@ function QuemSomos() {
               <div className="card-content">
                 <h2>Autoridade e <span>excelência técnica.</span></h2>
                 <p>
-                  Ser a marca especialista de referência em segurança eletrónica e tecnologia. Buscamos o reconhecimento absoluto 
+                  Ser a marca especialista de referência em segurança eletrônica e tecnologia. Buscamos o reconhecimento absoluto 
                   pela execução impecável e atendimento profissional, consolidando nossa autoridade sem competir por preço.
                 </p>
               </div>
@@ -86,11 +95,11 @@ function QuemSomos() {
                   </div>
                   <div className="valor-item-box">
                     <strong>Inovação Tecnológica</strong>
-                    <p>Integração do que há de mais moderno para garantir controlo e precisão absoluta.</p>
+                    <p>Integração do que há de mais moderno para garantir controle e precisão absoluta.</p>
                   </div>
                   <div className="valor-item-box">
                     <strong>Proteção Contínua</strong>
-                    <p>O cuidado e a estabilidade do património e da vida no centro de tudo o que fazemos.</p>
+                    <p>O cuidado e a estabilidade do patrimônio e da vida no centro de tudo o que fazemos.</p>
                   </div>
                   <div className="valor-item-box">
                     <strong>Profissionalismo</strong>
@@ -110,7 +119,7 @@ function QuemSomos() {
           <blockquote>
             "Segurança não é custo, é investimento para preservar o que levou anos para ser construído."
           </blockquote>
-          <cite>— Lucas Quevedo, Fundador da QTECH</cite>
+          <cite>— Lucas Quevedo</cite>
         </div>
       </section>
     </div>

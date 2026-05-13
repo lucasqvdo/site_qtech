@@ -31,7 +31,7 @@ function Header({ itensNoCarrinho = 0, onAbrirCarrinho }) {
 
         {/* 2. LOGO DA QTECH (Centralizada no mobile pelo CSS) */}
         <a href="/" className="header-logo-link" onClick={fecharMenu}>
-          <img src="/logo.jpg" alt="QTECH" className="header-logo-img" />
+          <img src="/logo.png" alt="QTECH" className="header-logo-img" />
         </a>
 
         {/* 3. NAVEGAÇÃO DE LINKS (Geralmente oculta no mobile dentro da gaveta) */}

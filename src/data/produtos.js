@@ -46,15 +46,15 @@ export const tabelaProdutos = [
   },
   {
     id: 4,
-    nome: "DVR Inteligente iMHDX 3008",
+    nome: "DVR Inteligente MHDX 3116 ",
     categoria: "DVR",
     marca: "Intelbras",
-    imagem: "/produtos/imhdx-3008.jpg",
-    descricao: "Gravador de vídeo com inteligência artificial de última geração.",
-    indicado: "Upgrade de sistemas analógicos para monitoramento inteligente.",
+    imagem: "/produtos/mhdx3116.jpg",
+    descricao: "analíticos de vídeo e gabinete compacto.",
+    indicado: "Feito especialmente para médios e pequenos projetos de CFTV",
     detalhes: [
-      "Reconhecimento facial em tempo real",
-      "Detecção inteligente de pessoas e veículos",
+    "Permite a expansão para até 24 canais no total, utilizando câmeras IP",
+        "Suporte para análise inteligente de vídeo",
       "Compressão de vídeo H.265+ (ocupa menos HD)",
       "Suporta câmeras de até 5MP"
     ]
@@ -121,17 +121,17 @@ export const tabelaProdutos = [
   },
   {
     id: 9,
-    nome: "Nobreak Senoidal SNB 1500",
+    nome: "Nobreak Intelbras ATTIV Preto 1500VA Bivolt",
     categoria: "Energia",
     marca: "Intelbras",
-    imagem: "/produtos/nobreak-snb.jpg",
+    imagem: "/produtos/nobreak.jpg",
     descricao: "Proteção de energia pura para equipamentos sensíveis.",
     indicado: "Servidores, computadores gamers e centrais de monitoramento.",
     detalhes: [
-      "Onda senoidal pura (igual à rede elétrica)",
+      "Onda Senoidal por Aproximação, ideal para equipamentos de segurança",
       "Autonomia para manter sistemas de CFTV ativos",
       "Proteção contra surtos e subtensões",
-      "Display LCD para monitoramento em tempo real"
+      "9 tomadas"
     ]
   },
   {
@@ -209,36 +209,23 @@ export const tabelaProdutos = [
       "Conexão direta via Wi-Fi"
     ]
   },
+ 
   {
-    id: 15,
-    nome: "Sensor de Inundação Smart",
-    categoria: "Automação",
-    marca: "Intelbras",
-    imagem: "/produtos/sensor-inundacao.jpg",
-    descricao: "Alerta imediato em caso de vazamentos de água.",
-    indicado: "Próximo a máquinas de lavar ou áreas com risco de alagamento.",
-    detalhes: [
-      "Notificação push em tempo real no celular",
-      "Tecnologia ZigBee de baixo consumo",
-      "Design compacto e à prova d'água",
-      "Disparo de cenas de emergência"
-    ]
-  },
-  {
-    id: 16,
-    nome: "Módulo de Relé Izy Smart",
-    categoria: "Automação",
-    marca: "Intelbras",
-    imagem: "/produtos/modulo-rele.jpg",
-    descricao: "Automatize portões eletrônicos, persianas e motores.",
-    indicado: "Projetos personalizados de automação de motores.",
-    detalhes: [
-      "Contato seco para diversas aplicações",
-      "Tamanho reduzido para caixas de passagem",
-      "Monitoramento de status em tempo real",
-      "Integração com ecossistema Izy"
-    ]
-  },
+  id: 16,
+  nome: "Interruptor Controlador de Cargas Wi-Fi EWS 211 Intelbras",
+  categoria: "Automação",
+  marca: "Intelbras",
+  imagem: "/produtos/ews-211.jpg",
+  descricao: "Módulo interruptor inteligente para embutir em caixas de passagem 4x2.",
+  indicado: "Transformar interruptores convencionais em inteligentes e controle de cargas de até 1200W.",
+  detalhes: [
+    "Saída de contato seco (maior versatilidade em diferentes tensões)",
+    "Compatível com Amazon Alexa e Google Assistente",
+    "Design compacto para instalação embutida atrás do interruptor",
+    "Agendamentos, cronômetros e integração com a linha Izy",
+    "Monitoramento de status e acionamento via aplicativo Izy Smart"
+  ]
+},
   {
     id: 17,
     nome: "Câmera Hikvision ColorVu DS-2CD2047G2-L",
@@ -255,20 +242,21 @@ export const tabelaProdutos = [
     ]
   },
   {
-    id: 18,
-    nome: "NVR Hikvision AcuSense DS-7608NXI-K1",
-    categoria: "DVR/NVR",
-    marca: "Hikvision",
-    imagem: "/produtos/hik-nvr.jpg",
-    descricao: "Gravador de rede com Inteligência Artificial para análise de vídeo.",
-    indicado: "Sistemas IP profissionais que precisam de busca inteligente por rostos.",
-    detalhes: [
-      "Filtro de alarme falso para humanos e veículos",
-      "Reconhecimento facial comparativo com banco de dados",
-      "Suporta câmeras de até 12MP",
-      "Saída de vídeo 4K"
-    ]
-  },
+  id: 18,
+  nome: "DVR 04 Canais Hikvision AcuSense iDS-7204HUHI",
+  categoria: "DVR",
+  marca: "Hikvision",
+  imagem: "/produtos/ids-7204huhi.jpg",
+  descricao: "Gravador digital inteligente com tecnologia AcuSense e suporte a câmeras 4K.",
+  indicado: "Projetos que exigem alta definição de imagem e filtragem precisa de alarmes.",
+  detalhes: [
+    "Tecnologia AcuSense: classificação de humanos e veículos para redução de falsos alarmes",
+    "Resolução de gravação de até 8 MP (4K) em câmeras Turbo HD",
+    "Compressão H.265 Pro+ para máxima otimização de armazenamento",
+    "Suporte a áudio via cabo coaxial em todos os canais BNC",
+    "Análise de vídeo inteligente (VCA) em todos os canais"
+  ]
+},
   {
     id: 19,
     nome: "Terminal Facial Hikvision DS-K1T343MWX",
@@ -403,5 +391,23 @@ export const tabelaProdutos = [
       "Web Server integrado para configuração rápida",
       "Saída de relé para acionamento de travas"
     ]
-  }
+  },
+
+
+  {
+  id: 28,
+  nome: "Fechadura Eletrônica Biométrica Smart TWG",
+  categoria: "Fechaduras",
+  marca: "TWG",
+  imagem: "/produtos/fechadura-twg.jpg",
+  descricao: "Controle de acesso inteligente com múltiplas formas de abertura e gestão via app.",
+  indicado: "Residências, apartamentos de locação (Airbnb) e escritórios.",
+  detalhes: [
+    "5 formas de abertura: Biometria, Senha, Cartão RFID, Chave Física e Aplicativo",
+    "Conectividade Wi-Fi integrada (não necessita de hub extra)",
+    "Gerenciamento de usuários e senhas temporárias via app",
+    "Relatório de acessos em tempo real no smartphone",
+    "Alimentação via pilhas com entrada micro-USB para emergências"
+  ]
+} 
 ];
