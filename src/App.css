@@ -8,6 +8,12 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #ffffff;
   color: #333333;
@@ -15,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ESTRUTURA PRINCIPAL DO REACT */
+/* ESTRUTURA PRINCIPAL */
 .App {
   display: flex;
   flex-direction: column;
@@ -23,22 +29,21 @@ body {
 }
 
 .conteudo-principal {
-  flex: 1; /* Garante que o footer fica sempre no fundo */
+  flex: 1;
 }
 
-/* ----------------------------------------- */
-/* A MAGIA DO RESPIRO: CLASSE CONTAINER GLOBAL */
-/* ----------------------------------------- */
+/* CONTAINER GLOBAL */
 .container {
-  max-width: 1200px; /* Largura máxima do site */
-  margin: 0 auto;    /* Centraliza no ecrã */
-  padding: 0 40px;   /* Respiro lateral no Desktop */
   width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
-/* Respiro no Mobile (Celulares) */
+/* MOBILE */
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px; 
+    padding: 0 20px;
   }
 }
