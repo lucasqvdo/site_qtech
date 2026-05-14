@@ -1,70 +1,229 @@
-/* src/components/Header.css */
+/* ============================================================
+   ESTILOS GERAIS (PC / DESKTOP)
+   ============================================================ */
 .qtech-header {
-  background: #fff; box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  position: sticky; top: 0; z-index: 1000; height: 80px;
-  display: flex; align-items: center;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
 }
 
 .header-content {
-  display: flex; justify-content: space-between; align-items: center;
-  width: 100%; position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
 }
 
 /* LOGO */
-.header-logo-link { display: flex; align-items: center; z-index: 1002; order: 1; }
-.header-logo-img { height: 85px; width: auto; object-fit: contain; }
+.header-logo-link {
+  display: flex;
+  align-items: center;
+  z-index: 1002;
+}
 
-/* NAV PC */
-.nav-wrapper { display: flex; align-items: center; order: 2; margin-left: auto; margin-right: 30px; }
-.header-nav { display: flex; gap: 20px; }
-.nav-link { text-decoration: none; color: #444; font-weight: 600; font-size: 0.95rem; }
+.header-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
 
-/* ACÕES (CARRINHO) */
-.header-right-actions { display: flex; align-items: center; order: 3; z-index: 1002; }
+/* NAVEGAÇÃO PC */
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #2a9d8f;
+}
+
+/* BOTÃO CARRINHO / AÇÕES */
+.header-right-actions {
+  display: flex;
+  align-items: center;
+  z-index: 1002;
+}
+
 .btn-header-orcamento {
-  position: relative; background: #2a9d8f; color: #fff; border: none;
-  padding: 10px 18px; border-radius: 8px; font-weight: bold; cursor: pointer;
-  display: flex; align-items: center; gap: 8px;
+  position: relative;
+  background: #2a9d8f;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.2s;
+}
+
+.btn-header-orcamento:active {
+  transform: scale(0.95);
 }
 
 .cart-badge {
-  position: absolute; top: -8px; right: -8px; background: #e76f51;
-  color: #fff; font-size: 0.75rem; font-weight: 800; height: 22px;
-  min-width: 22px; border-radius: 50%; display: flex; align-items: center;
-  justify-content: center; border: 2px solid #fff;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #e76f51;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 800;
+  height: 22px;
+  min-width: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
 }
 
-/* HAMBURGUER */
-.hamburger { display: none; background: none; border: none; cursor: pointer; padding: 5px; order: 0; }
-.hamburger .linha { display: block; width: 26px; height: 3px; background: #264653; margin: 5px 0; border-radius: 3px; transition: 0.3s; }
+/* HAMBURGUER (ESCONDIDO NO PC) */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger .linha {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #264653;
+  margin: 5px 0;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Animação do Hambúrguer para o X */
 .hamburger.ativo .linha:nth-child(1) { transform: translateY(8px) rotate(45deg); }
 .hamburger.ativo .linha:nth-child(2) { opacity: 0; }
 .hamburger.ativo .linha:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-@media (max-width: 768px) {
-  .qtech-header { height: 70px; }
-  
-  /* 1. HAMBURGUER NA ESQUERDA */
-  .hamburger { display: block; order: 1; }
 
-  /* 2. LOGO NO MEIO */
+/* ============================================================
+   REGRAS MOBILE (ATÉ 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .qtech-header { 
+    height: 90px; 
+    padding: 0 15px;
+  }
+
+  /* Exibir o hambúrguer no mobile */
+  .hamburger { 
+    display: block; 
+    order: 1; 
+  }
+
+  /* Logo centralizado */
   .header-logo-link {
-    order: 2; position: absolute; left: 50%; top: 50%;
+    order: 2;
+    position: absolute;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
   }
-  .header-logo-img { height: 32px; }
 
-  /* 3. CARRINHO NA DIREITA */
-  .header-right-actions { order: 3; margin-left: auto; }
-  .btn-header-orcamento { padding: 0; width: 44px; height: 44px; border-radius: 50%; justify-content: center; }
+  .header-logo-img { 
+    height: 75px; /* Tamanho maior que você pediu */
+  }
+
+  /* Carrinho na direita */
+  .header-right-actions { 
+    order: 3; 
+  }
+  
+  .btn-header-orcamento { 
+    padding: 0; 
+    width: 48px; 
+    height: 48px; 
+    border-radius: 50%; 
+    justify-content: center;
+  }
+  
   .cart-text { display: none; }
 
-  /* GAVETA MENU */
-  .nav-wrapper {
-    position: absolute; top: 70px; left: 0; width: 100%; background: #fff;
-    flex-direction: column; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    opacity: 0; visibility: hidden; transform: translateY(-10px); transition: 0.3s;
+.nav-wrapper {
+    position: absolute; 
+    /* 1. Distância do topo */
+    top: calc(100% + 15px); 
+    
+    /* 2. Alinhamento simétrico */
+    left: 15px;      
+    right: 15px;    /* Ao definir left e right, o navegador calcula a largura automaticamente */
+    width: auto;     /* Importante: mude width para auto para o 'right' funcionar */
+    
+    background: #ffffff;
+    flex-direction: column; 
+    border-radius: 20px; 
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    z-index: 999;
+    
+    /* Animação */
+    opacity: 0; 
+    visibility: hidden; 
+    transform: translateY(-10px); 
+    transition: all 0.3s ease;
   }
-  .nav-wrapper.aberto { opacity: 1; visibility: visible; transform: translateY(0); }
-  .header-nav { flex-direction: column; width: 100%; text-align: center; gap: 10px; }
+
+  .nav-wrapper.aberto { 
+    opacity: 1; 
+    visibility: visible; 
+    transform: translateY(0); 
+  }
+
+  /* Ajuste dos itens internos para combinar com o arredondado */
+.header-nav {
+  flex-direction: column;
+  width: 100%;
+  gap: 0;
+  /* Adicione isso: */
+  padding: 10px 0; 
+}
+
+  .nav-link { 
+    display: block;
+    width: 100%;
+    padding: 18px 25px; 
+    font-size: 1.05rem;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #f5f5f5;
+    box-sizing: border-box;
+  }
+
+  /* Remove a linha do último item para não "cortar" o arredondado de baixo */
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .nav-link:active {
+  background-color: #f9f9f9;
 }

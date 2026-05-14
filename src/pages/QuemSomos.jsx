@@ -27,7 +27,7 @@ function QuemSomos() {
             
             <div className="visual-tech-box">
               <img 
-                src="/lucas.jpg" 
+                src="/lucas.jpeg" 
                 alt="Lucas Quevedo - Fundador QTECH" 
                 className="founder-photo" 
               />
