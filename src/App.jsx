@@ -1,4 +1,5 @@
 // src/App.jsx
+import './App.css';
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
 import Loja from './pages/Loja';
 
-import './App.css';
+
 
 function App() {
   const [carrinho, setCarrinho] = useState([]);
@@ -18,8 +19,7 @@ function App() {
   const [produtoSelecionado, setProdutoSelecionado] = useState(null);
 
   const adicionarAoOrçamento = (produto) => {
-    // Captura a quantidade vinda do componente (Card ou Modal)
-    const qtdAdicionada = produto.quantidade || produto.qtd || 1;
+    const qtdAdicionada = produto.qtd || 1;
 
     setCarrinho((prev) => {
       const itemExiste = prev.find(item => item.id === produto.id);

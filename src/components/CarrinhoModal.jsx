@@ -3,20 +3,22 @@ import React from 'react';
 import './CarrinhoModal.css';
 
 function CarrinhoModal({ isOpen, carrinho, onClose, onRemover, onAlterarQtd, onFinalizar }) {
-  
-  // Cálculo do total de itens para exibir no resumo
+  if (!isOpen) {
+    return null;
+  }
+
   const totalItens = carrinho.reduce((acc, item) => acc + item.qtd, 0);
 
   return (
     <>
       {/* Overlay: escurece o fundo e fecha ao clicar fora */}
       <div 
-        className={`carrinho-overlay ${isOpen ? 'active' : ''}`} 
+        className="carrinho-overlay active" 
         onClick={onClose} 
       />
 
       {/* Gaveta Lateral */}
-      <aside className={`carrinho-drawer ${isOpen ? 'open' : ''}`}>
+      <aside className="carrinho-drawer open">
         <div className="carrinho-header">
           <h2>Meu Orçamento</h2>
           <button className="btn-fechar-gaveta" onClick={onClose} title="Fechar">&times;</button>

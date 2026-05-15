@@ -1,5 +1,6 @@
 // src/components/Header.jsx
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 function Header({ itensNoCarrinho = 0, onAbrirCarrinho }) {
@@ -37,9 +38,9 @@ function Header({ itensNoCarrinho = 0, onAbrirCarrinho }) {
         {/* 3. NAVEGAÇÃO DE LINKS (Geralmente oculta no mobile dentro da gaveta) */}
         <div className={`nav-wrapper ${menuAberto ? 'aberto' : ''}`}>
           <nav className="header-nav">
-            <a href="/" className="nav-link" onClick={fecharMenu}>Home</a>
-            <a href="/loja" className="nav-link" onClick={fecharMenu}>Catálogo</a>
-            <a href="/quem-somos" className="nav-link" onClick={fecharMenu}>Quem Somos</a>
+            <Link to="/" className="nav-link" onClick={fecharMenu}>Home</Link>
+            <Link to="/loja" className="nav-link" onClick={fecharMenu}>Catálogo</Link>
+            <Link to="/quem-somos" className="nav-link" onClick={fecharMenu}>Quem Somos</Link>
           </nav>
         </div>
 

@@ -1,14 +1,12 @@
 // src/pages/Loja.jsx
 import React, { useState } from 'react';
 import CardProduto from '../components/CardProduto';
-import ProdutoModal from '../components/ProdutoModal'; 
 import { tabelaProdutos } from '../data/produtos';
 import './Loja.css';
 
-function Loja({ onAdicionar }) {
+function Loja({ onAdicionar, onVerDetalhes }) {
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todos');
   const [marcaAtiva, setMarcaAtiva] = useState('Todas');
-  const [produtoSelecionado, setProdutoSelecionado] = useState(null);
   const [viewMode, setViewMode] = useState('grid'); 
 
   const categorias = ['Todos', ...new Set(tabelaProdutos.map(p => p.categoria))];
@@ -82,7 +80,7 @@ function Loja({ onAdicionar }) {
           <div className={`produtos-wrapper ${viewMode === 'list' ? 'list-view' : 'grid-view'}`}>
             {produtosFiltrados.length > 0 ? (
               produtosFiltrados.map((item) => (
-                <CardProduto key={item.id} produto={item} onAdicionar={onAdicionar} onVerDetalhes={() => setProdutoSelecionado(item)} />
+                <CardProduto key={item.id} produto={item} onAdicionar={onAdicionar} onVerDetalhes={() => onVerDetalhes(item)} />
               ))
             ) : (
               <div className="loja-vazia">
@@ -94,10 +92,6 @@ function Loja({ onAdicionar }) {
           </div>
         </main>
       </div>
-
-      {produtoSelecionado && (
-        <ProdutoModal produto={produtoSelecionado} onClose={() => setProdutoSelecionado(null)} onAdicionar={onAdicionar} />
-      )}
     </div>
   );
 }

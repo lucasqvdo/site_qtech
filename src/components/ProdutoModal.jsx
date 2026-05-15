@@ -60,7 +60,7 @@ function ProdutoModal({ produto, onClose, onAdicionar }) {
               <button 
                 className="btn-add-modal" 
                 onClick={() => { 
-                  onAdicionar({ ...produto, quantidade }); 
+                  onAdicionar({ ...produto, qtd: quantidade }); 
                   onClose(); 
                 }}
               >

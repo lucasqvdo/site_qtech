@@ -43,7 +43,7 @@ function CardProduto({ produto, onAdicionar, onVerDetalhes }) {
             {/* Envia o produto + a quantidade exata selecionada */}
             <button 
               className="btn-add" 
-              onClick={() => onAdicionar({ ...produto, quantidade })}
+              onClick={() => onAdicionar({ ...produto, qtd: quantidade })}
             >
               + Orçamento
             </button>
