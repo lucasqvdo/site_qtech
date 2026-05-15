@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './EstiloHome.css';
+import './Home.css';
 
 function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
