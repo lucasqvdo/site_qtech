@@ -9,17 +9,17 @@ function Home() {
     {
       id: 0,
       tag: "INFRAESTRUTURA",
-      title: "Proteção Inteligente",
-      subtitle: "Feita por Especialistas.",
+      title: "Onde há segurança,",
+      subtitle: "a vida acontece em paz.",
       desc: "Cuidamos da tecnologia invisível que protege o seu mundo. Vá viajar, trabalhe ou descanse com a certeza de que seu patrimônio está blindado por especialistas.",
       type: "hero",
       image: "/hero1-bg.png" 
     },
     {
       id: 1,
-      tag: "CFTV IP",
-      title: "Câmeras de Alta Performance",
-      subtitle: "A certeza de que tudo está bem, na palma da sua mão.",
+      tag: "Câmeras IP",
+      title: "A certeza de que tudo está bem,",
+      subtitle: "na palma da sua mão.",
       desc: "Conectividade de alta performance e câmeras de alta fidelidade instaladas por especialistas. Acesse suas imagens em tempo real, de qualquer lugar do mundo, com transmissão fluida.",
       type: "service",
       image: "/hero2-bg.png" 
@@ -27,8 +27,8 @@ function Home() {
     {
       id: 2,
       tag: "CONTROLE DE ACESSO",
-      title: "Controle Total de Entrada",
-      subtitle: "A certeza de quem entra. A paz de quem fica.",
+      title: "A certeza de quem entra.",
+      subtitle: " A paz de quem fica.",
       desc: "Proteja os acessos da sua empresa ou condomínio com o que há de mais seguro. Tecnologia biométrica e facial de alta precisão para garantir que apenas pessoas autorizadas passem.",
       type: "service",
       image: "/hero3-bg.png"
