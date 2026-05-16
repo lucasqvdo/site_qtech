@@ -39,7 +39,7 @@ function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000);
 
     // Limpa o timer anterior sempre que o activeSlide muda (via clique ou auto)
     return () => clearInterval(timer);
