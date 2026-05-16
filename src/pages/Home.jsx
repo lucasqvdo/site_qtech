@@ -20,7 +20,7 @@ function Home() {
       tag: "CFTV IP",
       title: "Câmeras de Alta Performance",
       subtitle: "A certeza de que tudo está bem, na palma da sua mão.",
-      desc: "Conectividade de alta performance e câmeras de alta fidelidade instaladas por especialistas. Acesse suas imagens em tempo real, de qualquer lugar do mundo, com transmissão fluida e sem travamentos.",
+      desc: "Conectividade de alta performance e câmeras de alta fidelidade instaladas por especialistas. Acesse suas imagens em tempo real, de qualquer lugar do mundo, com transmissão fluida e [...]
       type: "service",
       image: "/hero2-bg.png" 
     },
@@ -28,8 +28,8 @@ function Home() {
       id: 2,
       tag: "CONTROLE DE ACESSO",
       title: "Controle Total de Entrada",
-     subititle: "A certeza de quem entra. A paz de quem fica.",
-      desc: "Proteja os acessos da sua empresa ou condomínio com o que há de mais seguro. Tecnologia biométrica e facial de alta precisão para garantir que apenas pessoas autorizadas passem pela sua porta..",
+      subititle: "A certeza de quem entra. A paz de quem fica.",
+      desc: "Proteja os acessos da sua empresa ou condomínio com o que há de mais seguro. Tecnologia biométrica e facial de alta precisão para garantir que apenas pessoas autorizadas passem pe[...]
       type: "service",
       image: "/hero3-bg.png"
     }
@@ -39,7 +39,7 @@ function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 8000);
 
     // Limpa o timer anterior sempre que o activeSlide muda (via clique ou auto)
     return () => clearInterval(timer);
