@@ -65,7 +65,7 @@ function Home() {
                 <p>{slide.desc}</p>
                 <div className="hero-actions">
                   <Link to="/loja" className="btn-main">Explorar Catálogo</Link>
-                  <Link to="/quem-somos" className="btn-outline">Ver Estratégia</Link>
+                  <Link to="/quem-somos" className="btn-outline">Falar com um especialista</Link>
                 </div>
               </div>
 
