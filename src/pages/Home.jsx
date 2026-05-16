@@ -9,9 +9,9 @@ function Home() {
     {
       id: 0,
       tag: "INFRAESTRUTURA",
-      title: "Segurança Inteligente",
+      title: "Proteção Inteligente",
       subtitle: "Feita por Especialistas.",
-      desc: "Projetamos infraestruturas de segurança e redes de alta disponibilidade que colocam o controle absoluto na sua mão.",
+      desc: "Cuidamos da tecnologia invisível que protege o seu mundo. Vá viajar, trabalhe ou descanse com a certeza de que seu patrimônio está blindado por especialistas.",
       type: "hero",
       image: "/hero1-bg.png" 
     },
@@ -19,8 +19,8 @@ function Home() {
       id: 1,
       tag: "CFTV IP",
       title: "Câmeras de Alta Performance",
-      subtitle: "Imagens 24h sem falhas.",
-      desc: "Instalação de câmeras com inteligência artificial para reconhecimento facial e proteção perimetral avançada.",
+      subtitle: "A certeza de que tudo está bem, na palma da sua mão.",
+      desc: "Conectividade de alta performance e câmeras de alta fidelidade instaladas por especialistas. Acesse suas imagens em tempo real, de qualquer lugar do mundo, com transmissão fluida e sem travamentos.",
       type: "service",
       image: "/hero2-bg.png" 
     },
@@ -28,8 +28,8 @@ function Home() {
       id: 2,
       tag: "CONTROLE DE ACESSO",
       title: "Controle Total de Entrada",
-      subtitle: "Biometria e Facial.",
-      desc: "Gerencie o fluxo de pessoas e veículos no seu condomínio ou empresa com tecnologia de ponta da Control iD.",
+     subititle: "A certeza de quem entra. A paz de quem fica.",
+      desc: "Proteja os acessos da sua empresa ou condomínio com o que há de mais seguro. Tecnologia biométrica e facial de alta precisão para garantir que apenas pessoas autorizadas passem pela sua porta..",
       type: "service",
       image: "/hero3-bg.png"
     }
