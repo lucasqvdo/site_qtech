@@ -40,7 +40,7 @@ function CardProduto({ produto, onAdicionar, onVerDetalhes }) {
               <button onClick={handleIncrement} aria-label="Aumentar quantidade">+</button>
             </div>
             
-            {/* Envia o produto + a quantidade exata selecionada */}
+            {/* Envia o produto + a quantidade exata selecionada para a Loja */}
             <button 
               className="btn-add" 
               onClick={() => onAdicionar({ ...produto, qtd: quantidade })}

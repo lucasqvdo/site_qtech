@@ -97,3 +97,90 @@
   .produtos-wrapper.list-view .botoes-compra { flex-direction: row; }
   .produtos-wrapper.list-view .marca-badge { right: 15px; left: auto; }
 }
+/* --- NOTIFICAÇÃO DO CARRINHO (TOAST) EM TOM AZUL --- */
+
+.alerta-carrinho {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  
+  /* Fundo azul escuro profundo (Premium) com leve transparência e desfoque */
+  background-color: rgba(15, 23, 42, 0.95); 
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  
+  padding: 16px 24px;
+  border-radius: 12px;
+  
+  /* Borda sutil em azul ciano para dar o efeito de luz/neon */
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  
+  /* Sombra suave e profunda */
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  z-index: 9999;
+  overflow: hidden; /* Mantém a barra de progresso presa nas bordas arredondadas */
+  
+  /* Animação de entrada suave */
+  animation: toastSlideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.alerta-icone {
+  font-size: 18px;
+  /* Fundo azul claro translúcido para destacar o ícone */
+  background-color: rgba(56, 189, 248, 0.15); 
+  color: #38bdf8; /* Ícone em azul ciano vibrante */
+  padding: 8px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alerta-carrinho p {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: #f3f4f6;
+}
+
+/* Linha de tempo na base do aviso que reduz até sumir */
+.alerta-carrinho::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background-color: #38bdf8; /* Azul ciano brilhante na barra */
+  width: 100%;
+  animation: toastProgress 3s linear forwards;
+}
+
+/* --- ANIMAÇÕES --- */
+
+/* Efeito de deslizar vindo da direita */
+@keyframes toastSlideIn {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animação que esvazia a barra em sincronia com os 3 segundos do JavaScript */
+@keyframes toastProgress {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}

@@ -8,6 +8,8 @@ function Loja({ onAdicionar, onVerDetalhes }) {
   const [categoriaAtiva, setCategoriaAtiva] = useState('Todos');
   const [marcaAtiva, setMarcaAtiva] = useState('Todas');
   const [viewMode, setViewMode] = useState('grid'); 
+  // Estado para controlar a exibição e o texto da notificação do carrinho
+  const [notificacao, setNotificacao] = useState({ visivel: false, texto: '' });
 
   const categorias = ['Todos', ...new Set(tabelaProdutos.map(p => p.categoria))];
   const marcas = ['Todas', ...new Set(tabelaProdutos.filter(p => p.marca).map(p => p.marca))];
@@ -18,8 +20,33 @@ function Loja({ onAdicionar, onVerDetalhes }) {
     return matchCategoria && matchMarca;
   });
 
+  // Função que intercepta o clique do card, adiciona ao app e exibe o alerta
+  const handleAdicionarAoCarrinho = (produtoComQtd) => {
+    // Executa a função global vinda por props (passando o objeto com a quantidade)
+    onAdicionar(produtoComQtd);
+
+    // Ativa a notificação na tela com os dados corretos
+    setNotificacao({
+      visivel: true,
+      texto: `"${produtoComQtd.nome}" (${produtoComQtd.qtd}x) adicionado ao carrinho!`
+    });
+
+    // Remove o alerta após 3 segundos
+    setTimeout(() => {
+      setNotificacao({ visivel: false, texto: '' });
+    }, 3000);
+  };
+
   return (
     <div className="loja-layout">
+      {/* Alerta Visual (Toast) */}
+      {notificacao.visivel && (
+        <div className="alerta-carrinho">
+          <span className="alerta-icone">🛒</span>
+          <p>{notificacao.texto}</p>
+        </div>
+      )}
+
       <section className="loja-hero">
         <div className="container">
           <div className="loja-hero-content">
@@ -80,7 +107,13 @@ function Loja({ onAdicionar, onVerDetalhes }) {
           <div className={`produtos-wrapper ${viewMode === 'list' ? 'list-view' : 'grid-view'}`}>
             {produtosFiltrados.length > 0 ? (
               produtosFiltrados.map((item) => (
-                <CardProduto key={item.id} produto={item} onAdicionar={onAdicionar} onVerDetalhes={() => onVerDetalhes(item)} />
+                <CardProduto 
+                  key={item.id} 
+                  produto={item} 
+                  // Passa a função que gerencia o alerta recebendo os dados com a quantidade do card
+                  onAdicionar={(produtoComQtd) => handleAdicionarAoCarrinho(produtoComQtd)} 
+                  onVerDetalhes={() => onVerDetalhes(item)} 
+                />
               ))
             ) : (
               <div className="loja-vazia">
