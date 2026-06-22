@@ -213,7 +213,7 @@ export const tabelaProdutos = [
   {
     id: 15,
     nome: "Controlador facial Hikvision",
-    categoria: "Automação",
+    categoria: "Acesso",
     marca: "Hikvision",
     imagem: "/produtos/faciahikl.png",
     descricao: "Controlador facial ultrarrápido com conexão Wi-Fi.",
