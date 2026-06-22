@@ -209,6 +209,23 @@ export const tabelaProdutos = [
       "Conexão direta via Wi-Fi"
     ]
   },
+
+  {
+    id: 15,
+    nome: "Controlador facial Hikvision",
+    categoria: "Automação",
+    marca: "Hikvision",
+    imagem: "/produtos/faciahikl.jpg",
+    descricao: "Controlador facial ultrarrápido com conexão Wi-Fi.",
+    indicado: "Entradas de condomínios, escritórios e áreas restritas.",
+    detalhes: [
+      " Reconhecimento facial rápido e preciso",
+      "Abertura sem contato físico",
+      "Liberação por face, cartão e senha",
+      "Tela touch screen de alta resolução"
+      
+    ]
+  },
  
   {
     id: 17,
