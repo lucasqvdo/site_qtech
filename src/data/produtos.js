@@ -211,22 +211,6 @@ export const tabelaProdutos = [
   },
  
   {
-  id: 16,
-  nome: "Interruptor Controlador de Cargas Wi-Fi EWS 211 Intelbras",
-  categoria: "Automação",
-  marca: "Intelbras",
-  imagem: "/produtos/ews-211.jpg",
-  descricao: "Módulo interruptor inteligente para embutir em caixas de passagem 4x2.",
-  indicado: "Transformar interruptores convencionais em inteligentes e controle de cargas de até 1200W.",
-  detalhes: [
-    "Saída de contato seco (maior versatilidade em diferentes tensões)",
-    "Compatível com Amazon Alexa e Google Assistente",
-    "Design compacto para instalação embutida atrás do interruptor",
-    "Agendamentos, cronômetros e integração com a linha Izy",
-    "Monitoramento de status e acionamento via aplicativo Izy Smart"
-  ]
-},
-  {
     id: 17,
     nome: "Câmera Hikvision ColorVu DS-2CD2047G2-L",
     categoria: "Câmeras",
