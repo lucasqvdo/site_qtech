@@ -107,7 +107,7 @@ function Home() {
       <section className="pain-points" aria-labelledby="servicos-destaque">
         <div className="container"><h2 id="servicos-destaque">Serviços de segurança eletrônica e infraestrutura</h2></div>
         <div className="container">
-          <div className="grid-3">
+          <h2 id="solucoes-qtech" className="seo-section-title">Segurança eletrônica, CFTV e redes para seu patrimônio</h2>\n          <p className="seo-section-intro">A QTECH projeta e instala soluções de câmeras de segurança, controle de acesso, alarmes e infraestrutura de redes para residências e empresas em São Paulo.</p>\n          <div className="grid-3">
             <div className="pain-card">
               <h3>CFTV e câmeras de segurança</h3>
               <p>Nossa infraestrutura preventiva garante acesso 24h sem travamentos.</p>
