@@ -100,19 +100,20 @@ function Home() {
       </section>
 
       {/* SEÇÃO DE DIFERENCIAIS */}
-      <section className="pain-points">
+      <section className="pain-points" aria-labelledby="servicos-destaque">
+        <div className="container"><h2 id="servicos-destaque" className="sr-only">Serviços de segurança eletrônica e infraestrutura</h2></div>
         <div className="container">
           <div className="grid-3">
             <div className="pain-card">
-              <h3>Sua câmera falha?</h3>
+              <h3>CFTV e câmeras de segurança</h3>
               <p>Nossa infraestrutura preventiva garante acesso 24h sem travamentos.</p>
             </div>
             <div className="pain-card">
-              <h3>Wi-Fi lento?</h3>
+              <h3>Redes e infraestrutura</h3>
               <p>Projetamos redes Mesh e cabeamento estruturado para cobertura total.</p>
             </div>
             <div className="pain-card">
-              <h3>Dúvidas técnicas?</h3>
+              <h3>Controle de acesso e alarmes</h3>
               <p>Curadoria Intelbras, Hikvision e Control iD — o padrão ouro.</p>
             </div>
           </div>
