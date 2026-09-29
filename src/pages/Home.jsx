@@ -101,7 +101,7 @@ function Home() {
 
       {/* SEÇÃO DE DIFERENCIAIS */}
       <section className="pain-points" aria-labelledby="servicos-destaque">
-        <div className="container"><h2 id="servicos-destaque" className="sr-only">Serviços de segurança eletrônica e infraestrutura</h2></div>
+        <div className="container"><h2 id="servicos-destaque">Serviços de segurança eletrônica e infraestrutura</h2></div>
         <div className="container">
           <div className="grid-3">
             <div className="pain-card">
