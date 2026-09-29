@@ -1,0 +1,10 @@
+{
+  "name": "QTECH Segurança Eletrônica",
+  "short_name": "QTECH",
+  "description": "Soluções em segurança eletrônica, CFTV, controle de acesso, alarmes e redes.",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0a191e",
+  "background_color": "#0a191e"
+}
