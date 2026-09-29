@@ -10,6 +10,8 @@ import ProdutoModal from './components/ProdutoModal';
 import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
 import Loja from './pages/Loja';
+import Servicos from './pages/Servicos';
+import SeoManager from './components/SeoManager';
 
 
 
@@ -55,6 +57,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <SeoManager />
         <Header 
           itensNoCarrinho={carrinho.reduce((acc, curr) => acc + curr.qtd, 0)} 
           onAbrirCarrinho={() => setIsCarrinhoAberto(true)}
@@ -65,6 +68,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/loja" element={<Loja onAdicionar={adicionarAoOrçamento} onVerDetalhes={setProdutoSelecionado} />} />
+            <Route path="/servicos" element={<Servicos />} />
           </Routes>
         </main>
 
