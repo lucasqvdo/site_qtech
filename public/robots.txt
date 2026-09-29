@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# O sitemap deve usar a URL pública definitiva do domínio.
-# Exemplo após configurar o domínio: Sitemap: https://seudominio.com.br/sitemap.xml
+Sitemap: https://www.qtechseguranca.com.br/sitemap.xml
