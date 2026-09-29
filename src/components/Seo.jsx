@@ -1,6 +1,8 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
+const SITE_URL = 'https://www.qtechseguranca.com.br';
+
 const pages = {
   '/': {
     title: 'QTECH Segurança Eletrônica | CFTV, Alarmes e Controle de Acesso',
@@ -34,7 +36,7 @@ export default function Seo() {
 
   useEffect(() => {
     const page = pages[pathname] || pages['/'];
-    const canonicalUrl = `${window.location.origin}${pathname === '/' ? '/' : pathname}`;
+    const canonicalUrl = `${SITE_URL}${pathname === '/' ? '/' : pathname}`;
 
     document.title = page.title;
     upsertMeta('meta[name="description"]', { name: 'description', content: page.description });
