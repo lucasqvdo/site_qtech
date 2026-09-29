@@ -7,13 +7,11 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CarrinhoModal from './components/CarrinhoModal';
 import ProdutoModal from './components/ProdutoModal';
+import Seo from './components/Seo';
 import Home from './pages/Home';
 import QuemSomos from './pages/QuemSomos';
-import Loja from './pages/Loja';
 import Servicos from './pages/Servicos';
-import SeoManager from './components/SeoManager';
-
-
+import Loja from './pages/Loja';
 
 function App() {
   const [carrinho, setCarrinho] = useState([]);
@@ -22,29 +20,19 @@ function App() {
 
   const adicionarAoOrçamento = (produto) => {
     const qtdAdicionada = produto.qtd || 1;
-
     setCarrinho((prev) => {
       const itemExiste = prev.find(item => item.id === produto.id);
       if (itemExiste) {
-        return prev.map(item => 
-          item.id === produto.id 
-            ? { ...item, qtd: item.qtd + qtdAdicionada } 
-            : item
-        );
+        return prev.map(item => item.id === produto.id ? { ...item, qtd: item.qtd + qtdAdicionada } : item);
       }
       return [...prev, { ...produto, qtd: qtdAdicionada }];
     });
-    // Carrinho não abre automaticamente conforme solicitado
   };
 
-  const removerDoCarrinho = (id) => {
-    setCarrinho(carrinho.filter(item => item.id !== id));
-  };
+  const removerDoCarrinho = (id) => setCarrinho(carrinho.filter(item => item.id !== id));
 
   const alterarQuantidade = (id, delta) => {
-    setCarrinho(carrinho.map(item => 
-      item.id === id ? { ...item, qtd: Math.max(1, item.qtd + delta) } : item
-    ));
+    setCarrinho(carrinho.map(item => item.id === id ? { ...item, qtd: Math.max(1, item.qtd + delta) } : item));
   };
 
   const enviarWhatsApp = () => {
@@ -56,25 +44,22 @@ function App() {
 
   return (
     <Router>
+      <Seo />
       <div className="App">
-        <SeoManager />
-        <Header 
-          itensNoCarrinho={carrinho.reduce((acc, curr) => acc + curr.qtd, 0)} 
+        <Header
+          itensNoCarrinho={carrinho.reduce((acc, curr) => acc + curr.qtd, 0)}
           onAbrirCarrinho={() => setIsCarrinhoAberto(true)}
         />
-        
         <main className="conteudo-principal">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/servicos" element={<Servicos />} />
             <Route path="/quem-somos" element={<QuemSomos />} />
             <Route path="/loja" element={<Loja onAdicionar={adicionarAoOrçamento} onVerDetalhes={setProdutoSelecionado} />} />
-            <Route path="/servicos" element={<Servicos />} />
           </Routes>
         </main>
-
         <Footer />
-
-        <CarrinhoModal 
+        <CarrinhoModal
           isOpen={isCarrinhoAberto}
           carrinho={carrinho}
           onClose={() => setIsCarrinhoAberto(false)}
@@ -82,17 +67,11 @@ function App() {
           onAlterarQtd={alterarQuantidade}
           onFinalizar={enviarWhatsApp}
         />
-
         {produtoSelecionado && (
-          <ProdutoModal 
-            produto={produtoSelecionado} 
-            onClose={() => setProdutoSelecionado(null)} 
-            onAdicionar={adicionarAoOrçamento}
-          />
+          <ProdutoModal produto={produtoSelecionado} onClose={() => setProdutoSelecionado(null)} onAdicionar={adicionarAoOrçamento} />
         )}
       </div>
     </Router>
   );
 }
-
-export default App; 
+export default App;
