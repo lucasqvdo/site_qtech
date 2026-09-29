@@ -39,6 +39,7 @@ function Header({ itensNoCarrinho = 0, onAbrirCarrinho }) {
         <div className={`nav-wrapper ${menuAberto ? 'aberto' : ''}`}>
           <nav className="header-nav">
             <Link to="/" className="nav-link" onClick={fecharMenu}>Home</Link>
+            <Link to="/servicos" className="nav-link" onClick={fecharMenu}>Serviços</Link>
             <Link to="/loja" className="nav-link" onClick={fecharMenu}>Catálogo</Link>
             <Link to="/quem-somos" className="nav-link" onClick={fecharMenu}>Quem Somos</Link>
           </nav>
