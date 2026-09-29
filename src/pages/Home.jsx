@@ -61,7 +61,11 @@ function Home() {
                 <div className="status-badge">
                   <span className="dot pulse"></span> {slide.tag}
                 </div>
-                <h1>{slide.title} <span>{slide.subtitle}</span></h1>
+                {index === 0 ? (
+                  <h1>{slide.title} <span>{slide.subtitle}</span></h1>
+                ) : (
+                  <h2>{slide.title} <span>{slide.subtitle}</span></h2>
+                )}
                 <p>{slide.desc}</p>
                 <div className="hero-actions">
                   <Link to="/loja" className="btn-main">Explorar Catálogo</Link>
