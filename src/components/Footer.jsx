@@ -30,6 +30,7 @@ function Footer() {
           <nav className="footer-nav">
             <Link to="/" onClick={scrollToTop}>Início</Link>
             <Link to="/quem-somos" onClick={scrollToTop}>Quem Somos</Link>
+            <Link to="/servicos" onClick={scrollToTop}>Serviços</Link>
             <Link to="/loja" onClick={scrollToTop}>Catálogo de Produtos</Link>
           </nav>
         </div>
